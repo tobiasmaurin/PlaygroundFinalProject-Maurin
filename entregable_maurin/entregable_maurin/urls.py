@@ -16,20 +16,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from anillos import views
-
+from anillos import views as anillos_views
+from anteojos import views as anteojos_views
+from clientes import views as clientes_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('anillos/', views.anillo_form, name= 'anillo_form'),
-]
-
-from anteojos import views
-urlpatterns = [
-    path('anteojos/', views.anteojo_form, name= 'anteojo_form')
-]
-
-from clientes import views
-urlpatterns = [
-    path('clientes/', views.cliente_form, name= 'cliente_form')
+    path('anillos/', anillos_views.anillo_form, name='anillo_form'),
+    path('anteojos/', anteojos_views.anteojo_form, name='anteojo_form'),
+    path('clientes/', clientes_views.cliente_form, name='cliente_form'),
 ]
