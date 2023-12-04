@@ -5,8 +5,8 @@ from django.db import models
 #Aqui estoy creando la clase anillos
 
 class anillo (models.Model):
-    tipo = models.CharField (max_length=20)
-    material = models.CharField (max_length=20)
-    medida = models.IntegerField ()
+    tipo = models.CharField (max_length=20)          #alianza, compromizo, iniciales, otros
+    material = models.CharField (max_length=20)      #oro, plata, bronce
+    medida = models.IntegerField ()                  
     precio = models.IntegerField ()
-    
+

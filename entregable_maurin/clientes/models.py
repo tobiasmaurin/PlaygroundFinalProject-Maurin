@@ -4,9 +4,10 @@ from django.db import models
 
 # aca se crea la clase cliente
 
-class cliente (models.model):
+class cliente (models.Model):
     nombre = models.CharField (max_length=50)
     dni = models.IntegerField ()
     email = models.EmailField ()
     celular = models.IntegerField ()
-    
+
+

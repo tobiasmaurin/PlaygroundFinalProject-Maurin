@@ -16,7 +16,20 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from anillos import views
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('anillos/', views.anillo_form, name= 'anillo_form'),
+]
+
+from anteojos import views
+urlpatterns = [
+    path('anteojos/', views.anteojo_form, name= 'anteojo_form')
+]
+
+from clientes import views
+urlpatterns = [
+    path('clientes/', views.cliente_form, name= 'cliente_form')
 ]
