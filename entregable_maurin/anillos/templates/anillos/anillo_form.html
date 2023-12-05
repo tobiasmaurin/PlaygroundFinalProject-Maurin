@@ -1,0 +1,20 @@
+<!-- anillo_form.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Anillos</title>
+</head>
+<body>
+
+<h1>Anillos</h1>
+
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Guardar</button>
+</form>
+
+</body>
+</html>

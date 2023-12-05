@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from anillos.forms import AnilloForm
 
+
+
 def anillo_form (request):
     if request.method == 'POST':
         form = AnilloForm(request.POST)
