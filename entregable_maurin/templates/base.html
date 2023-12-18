@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Título de tu sitio</title>
+    <!-- Enlaces a tus archivos estáticos: CSS, JavaScript, etc. -->
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <!-- Agrega más enlaces según sea necesario -->
+</head>
+<body>
+
+<!-- Barra de navegación -->
+<nav>
+    <ul>
+        <li><a href="/anillos/">Anillos</a></li>
+        <li><a href="/anteojos/">Anteojos</a></li>
+        <li><a href="/clientes/">Clientes</a></li>
+        <!-- Agrega más enlaces a otras secciones -->
+    </ul>
+</nav>
+
+<!-- Contenido específico de cada página -->
+<div class="content">
+    {% block content %}
+    {% endblock %}
+</div>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; {{ year }} TuSitio.com. Todos los derechos reservados.</p>
+</footer>
+
+<!-- Scripts JavaScript o librerías -->
+<script src="{% static 'js/main.js' %}"></script>
+<!-- Agrega más scripts según sea necesario -->
+
+</body>
+</html>
