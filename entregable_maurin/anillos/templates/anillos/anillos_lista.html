@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Listado de Anillos</h1>
+
+  <ul>
+    {% for anillo in anillos %}
+      <li>
+        Tipo: {{ anillo.tipo }}, Material: {{ anillo.material }}, Medida: {{ anillo.medida }}, Precio: {{ anillo.precio }}
+        <a href="{% url 'anillos_detalle' pk=anillo.pk %}"><button>Ver</button></a>
+        <a href="{% url 'anillos_editar' pk=anillo.pk %}"><button>Editar</button></a>
+        <a href="{% url 'anillos_borrar' pk=anillo.pk %}"><button>Borrar</button></a>
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock %}
+

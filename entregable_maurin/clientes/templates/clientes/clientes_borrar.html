@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Borrar Cliente</h1>
+
+
+<form action="" method="POST">
+    {% csrf_token %}
+    Estas seguro que deseas borrar este cliente?
+    <input type="submit" value="Eliminar">
+</form>
+
+{% endblock %}

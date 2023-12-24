@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Anillo Detalle</h1>
+
+
+<p>Tipo del anillo: <i>{{anillo.tipo}}</i></p>
+<p>Material: <i>{{anillo.material}}</i></p>
+<p>Medida: <i>{{anillo.medida}}</i></p>
+<p>Precio: <i>{{anillo.precio}}</i></p>
+<p>
+    <a href="{% url 'anillos_lista' %}">Regresar</a>
+</p>
+
+{% endblock %}

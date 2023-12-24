@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Listado de Anteojos</h1>
+
+  <ul>
+    {% for anteojo in anteojos %}
+      <li>
+        Tipo: {{ anteojo.tipo }}, Marca: {{ anteojo.marca }}, Color: {{ anteojo.color }}, tamanio: {{ anteojo.tamanio }}
+        <a href="{% url 'anteojos_detalle' pk=anteojo.pk %}"><button>Ver</button></a>
+        <a href="{% url 'anteojos_editar' pk=anteojo.pk %}"><button>Editar</button></a>
+        <a href="{% url 'anteojos_borrar' pk=anteojo.pk %}"><button>Borrar</button></a>
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock %}

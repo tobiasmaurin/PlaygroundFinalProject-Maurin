@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Anteojo Detalle</h1>
+
+
+<p>Tipo del anteojo: <i>{{anteojo.tipo}}</i></p>
+<p>marca: <i>{{anteojo.marca}}</i></p>
+<p>Color: <i>{{anteojo.color}}</i></p>
+<p>Tamanio: <i>{{anteojo.tamanio}}</i></p>
+<p>
+    <a href="{% url 'anteojos_lista' %}">Regresar</a>
+</p>
+
+{% endblock %}

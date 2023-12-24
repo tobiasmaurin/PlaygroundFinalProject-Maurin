@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Listado de Clientes</h1>
+
+  <ul>
+    {% for cliente in clientes %}
+      <li>
+        Nombre: {{ cliente.nombre }}, Dni: {{ cliente.dni }}, Email: {{ cliente.email }}, Celular: {{ cliente.celular }}
+        <a href="{% url 'clientes_detalle' pk=cliente.pk %}"><button>Ver</button></a>
+        <a href="{% url 'clientes_editar' pk=cliente.pk %}"><button>Editar</button></a>
+        <a href="{% url 'clientes_borrar' pk=cliente.pk %}"><button>Borrar</button></a>
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock %}
