@@ -9,4 +9,5 @@ class anillo (models.Model):
     material = models.CharField (max_length=20)      #oro, plata, bronce
     medida = models.IntegerField ()                  
     precio = models.IntegerField ()
+    imagen = models.ImageField(upload_to='media/imagenes_anillos', null=True, blank = True)
 

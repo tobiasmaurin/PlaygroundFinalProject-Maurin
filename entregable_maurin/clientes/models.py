@@ -9,5 +9,6 @@ class cliente (models.Model):
     dni = models.IntegerField ()
     email = models.EmailField ()
     celular = models.IntegerField ()
+    imagen = models.ImageField(upload_to='media/imagenes_clientes', null=True, blank = True)
 
 

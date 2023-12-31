@@ -1,15 +1,22 @@
+
+
+
+
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>Anteojo Detalle</h1>
+<!-- anteojos/anteojos_detalle.html -->
+<h1>Detalle de Anteojo</h1>
+<p>Tipo: {{ object.tipo }}</p>
+<p>Marca: {{ object.marca }}</p>
+<p>Color: {{ object.color }}</p>
+<p>Tamanio: {{ object.tamanio }}</p>
 
+{% if object.imagen %}
+    <img src="{{ object.imagen.url }}" alt="Imagen del anteojo">
+{% else %}
+    <p>No hay imagen disponible</p>
+{% endif %}
 
-<p>Tipo del anteojo: <i>{{anteojo.tipo}}</i></p>
-<p>marca: <i>{{anteojo.marca}}</i></p>
-<p>Color: <i>{{anteojo.color}}</i></p>
-<p>Tamanio: <i>{{anteojo.tamanio}}</i></p>
-<p>
-    <a href="{% url 'anteojos_lista' %}">Regresar</a>
-</p>
 
 {% endblock %}

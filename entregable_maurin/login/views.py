@@ -4,6 +4,10 @@ from django.contrib.auth import login, authenticate
 from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
 from django.contrib.auth.views import LogoutView
 
+
+
+
+
 # Create your views here.
 
 #### LOG IN ####
@@ -58,3 +62,6 @@ def register(request):
 ### LOG OUT ###
 class logout(LogoutView):
      template_name = 'login/logut.html'
+
+
+

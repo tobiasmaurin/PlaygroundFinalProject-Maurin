@@ -37,7 +37,7 @@ class AnteojoUpdateView(UpdateView):
     model = anteojo
     template_name = "anteojos/anteojos_editar.html"
     success_url = reverse_lazy('anteojos_lista')
-    fields = ['tipo', 'marca', 'color', 'tamanio']
+    fields = ['tipo', 'marca', 'color', 'tamanio', 'imagen']
     
 
 

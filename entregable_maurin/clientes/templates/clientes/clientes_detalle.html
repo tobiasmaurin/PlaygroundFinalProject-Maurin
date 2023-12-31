@@ -1,15 +1,20 @@
+
+
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>Clientes Detalle</h1>
+<!-- clientes/clientes_detalle.html -->
+<h1>Detalle de clientes</h1>
+<p>Nombre: {{ object.nombre }}</p>
+<p>DNI: {{ object.dni }}</p>
+<p>Email: {{ object.email }}</p>
+<p>Celular: {{ object.celular }}</p>
 
+{% if object.imagen %}
+    <img src="{{ object.imagen.url }}" alt="Imagen del cliente">
+{% else %}
+    <p>No hay imagen disponible</p>
+{% endif %}
 
-<p>Nombre del cliente: <i>{{cliente.nombre}}</i></p>
-<p>Dni: <i>{{cliente.dni}}</i></p>
-<p>Email: <i>{{cliente.email}}</i></p>
-<p>numero: <i>{{cliente.numero}}</i></p>
-<p>
-    <a href="{% url 'clientes_lista' %}">Regresar</a>
-</p>
 
 {% endblock %}

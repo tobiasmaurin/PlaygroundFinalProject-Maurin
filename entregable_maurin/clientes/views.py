@@ -41,7 +41,7 @@ class ClienteUpdateView(UpdateView):
     model = cliente
     template_name = "clientes/clientes_editar.html"
     success_url = reverse_lazy('clientes_lista')
-    fields = ['nombre', 'dni', 'email', 'celular']
+    fields = ['nombre', 'dni', 'email', 'celular', 'imagen']
     
 
 

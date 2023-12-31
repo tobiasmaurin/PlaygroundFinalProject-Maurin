@@ -10,5 +10,5 @@ class anteojo (models.Model):
     marca = models.CharField (max_length=30)          # zero, rayban, etc
     color = models.CharField (max_length=20)          # negro, marron, etc
     tamanio = models.CharField (max_length=20)        # chico, mediano, grande
-
+    imagen = models.ImageField(upload_to='media/imagenes_anteojos', null=True, blank = True)
 

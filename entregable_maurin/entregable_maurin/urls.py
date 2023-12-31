@@ -28,10 +28,11 @@ from django.conf.urls.static import static
 from login.views import LogoutView
 
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('anillos/', anillos_views.anillo_form, name='anillo_form'),
-    path('pagina_inicio/', anillos_views.pagina_inicio, name= 'acerca_de_mi'),
+    path('acerca_de_mi/', anillos_views.pagina_inicio, name= 'acerca_de_mi'),
     path('anteojos/', anteojos_views.anteojo_form, name='anteojo_form'),
     path('clientes/', clientes_views.cliente_form, name='cliente_form'),
     

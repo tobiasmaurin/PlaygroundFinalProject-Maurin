@@ -35,11 +35,11 @@ class AnilloDetailView(DetailView):
 
 
 
-class AnilloUpdateView(UpdateView):
+class AnilloUpdateView(UpdateView):                                                 
     model = anillo
     template_name = "anillos/anillos_editar.html"
     success_url = reverse_lazy('anillos_lista')
-    fields = ['tipo', 'material', 'medida', 'precio']
+    fields = ['tipo', 'material', 'medida', 'precio', 'imagen']
     
 
 

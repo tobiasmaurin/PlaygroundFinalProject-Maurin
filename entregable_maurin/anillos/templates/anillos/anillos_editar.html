@@ -1,15 +1,18 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>Editar Anillos</h1>
+  <h1>Editar Anillo</h1>
 
-
-<form action="" method="POST">
+  <form method="post" enctype="multipart/form-data">
     {% csrf_token %}
-    {{form.as_p}}
-    <input type="submit" value="Editar">
-</form>
+    {{ form.as_p }}
+
+    <input type="submit" value="Guardar cambios">
+  </form>
+
+  <p><a href="{% url 'anillos_lista' %}">Volver al listado de anillos</a></p>
 {% endblock %}
+
 
 
 

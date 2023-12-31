@@ -1,15 +1,21 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>Anillo Detalle</h1>
+<!-- anillos/anillos_detalle.html -->
+<h1>Detalle de Anillo</h1>
+<p>Tipo: {{ object.tipo }}</p>
+<p>Material: {{ object.material }}</p>
+<p>Medida: {{ object.medida }}</p>
+<p>Precio: {{ object.precio }}</p>
 
+{% if object.imagen %}
+    <img src="{{ object.imagen.url }}" alt="Imagen del anillo">
+{% else %}
+    <p>No hay imagen disponible</p>
+{% endif %}
 
-<p>Tipo del anillo: <i>{{anillo.tipo}}</i></p>
-<p>Material: <i>{{anillo.material}}</i></p>
-<p>Medida: <i>{{anillo.medida}}</i></p>
-<p>Precio: <i>{{anillo.precio}}</i></p>
-<p>
-    <a href="{% url 'anillos_lista' %}">Regresar</a>
-</p>
 
 {% endblock %}
+
+
+
