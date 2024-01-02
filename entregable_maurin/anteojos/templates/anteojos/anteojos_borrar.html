@@ -1,13 +1,15 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>Borrar Anteojo</h1>
+  {% if request.user.is_staff %}
+    <h1>Borrar Anteojo</h1>
 
-
-<form action="" method="POST">
-    {% csrf_token %}
-    Estas seguro que deseas borrar este anteojo?
-    <input type="submit" value="Eliminar">
-</form>
-
+    <form action="" method="POST">
+      {% csrf_token %}
+      ¿Estás seguro de que deseas borrar este anteojo?
+      <input type="submit" value="Eliminar">
+    </form>
+  {% else %}
+    <h1>Esta acción solo la pueden realizar administradores</h1>
+  {% endif %}
 {% endblock %}

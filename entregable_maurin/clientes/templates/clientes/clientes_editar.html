@@ -1,16 +1,18 @@
-
-
 {% extends 'base.html' %}
 
 {% block content %}
-  <h1>Editar Clientes</h1>
+  {% if request.user.is_staff %}
+    <h1>Editar Clientes</h1>
 
-  <form method="post" enctype="multipart/form-data">
-    {% csrf_token %}
-    {{ form.as_p }}
+    <form method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+      {{ form.as_p }}
 
-    <input type="submit" value="Guardar cambios">
-  </form>
+      <input type="submit" value="Guardar cambios">
+    </form>
 
-  <p><a href="{% url 'clientes_lista' %}">Volver al listado de clientes</a></p>
+    <p><a href="{% url 'clientes_lista' %}">Volver al listado de clientes</a></p>
+  {% else %}
+    <h1>Esta acción solo la pueden realizar administradores</h1>
+  {% endif %}
 {% endblock %}

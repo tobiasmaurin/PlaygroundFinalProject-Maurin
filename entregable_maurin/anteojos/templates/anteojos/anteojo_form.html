@@ -1,11 +1,15 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1>Formulario para anteojos</h1>
+    {% if request.user.is_staff %}
+        <h1>Formulario para anteojos</h1>
 
-    <form method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Guardar</button>
-    </form>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Guardar</button>
+        </form>
+    {% else %}
+        <h1>Esta acción solo la pueden realizar administradores</h1>
+    {% endif %}
 {% endblock %}
